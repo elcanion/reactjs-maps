@@ -1,20 +1,13 @@
 import React from 'react';
-import { AppBar, Button, CssBaseline, IconButton, ThemeProvider, Toolbar, Typography } from "@mui/material";
+import { CssBaseline, ThemeProvider } from "@mui/material";
 import theme from "./theme";
-import DriveEtaIcon from "@mui/icons-material/DriveEta";
+import { Navbar } from './components/Navbar';
 
 function App() {
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline/>
-      <AppBar position="static" enableColorOnDark>
-        <Toolbar>
-          <IconButton color='inherit' edge="start">
-            <DriveEtaIcon/>
-          </IconButton>
-          <Typography variant='h6'>Delivery</Typography>
-        </Toolbar>
-      </AppBar>
+      <Navbar/>
     </ThemeProvider>
   );
 }
